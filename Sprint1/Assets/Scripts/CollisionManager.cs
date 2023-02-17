@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CollisionManager : MonoBehaviour
         GameObject[] shots = GameObject.FindGameObjectsWithTag("Bullet");
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
 
         for (int i = 0; i < shots.Length; i++)
@@ -37,6 +40,24 @@ public class CollisionManager : MonoBehaviour
 
 
         }
+
+
+
+        for (int j = 0; j < enemies.Length; j++)
+        {
+
+            if (AABBCollision(player, enemies[j]))
+            {
+
+                Destroy(player);
+
+                Destroy(enemies[j]);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+
+        }
+
+
 
 
 
