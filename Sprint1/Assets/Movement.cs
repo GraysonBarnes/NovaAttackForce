@@ -19,10 +19,26 @@ public class Movement : MonoBehaviour
     void Update()
     {
         float h = Input.GetAxisRaw("Horizontal");
-        float v = 0;
-   
-        gameObject.transform.position = new Vector2 (transform.position.x + (h * speed), 
-        transform.position.y + (v * speed));
+        float v = Input.GetAxisRaw("Vertical");
+        print(gameObject.transform.position.y);
+
+        if(gameObject.transform.position.x <= -7 && h < 0)
+        {
+            h = 0;
+        }
+        if (gameObject.transform.position.x >= 7 && h > 0)
+        {
+            h = 0;
+        }
+        if (gameObject.transform.position.y <= -4.2 && v < 0)
+        {
+            v = 0;
+        }
+        if (gameObject.transform.position.y >= -1 && v > 0)
+        {
+            v = 0;
+        }
+        gameObject.transform.position = new Vector2 (transform.position.x + (h * speed), transform.position.y + (v * speed));
 
         shoot = Input.GetKeyDown(KeyCode.Space);
         if (shoot)
