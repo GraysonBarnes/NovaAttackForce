@@ -379,8 +379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705e35d87ba5c1943a6730e7e2dcbfe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroid: {fileID: -1052527719846381634, guid: be5e93e1476b0114eb3d1694add24050, type: 3}
-  period: 0.5
+  asteroid: {fileID: 6662911030125831778, guid: be5e93e1476b0114eb3d1694add24050, type: 3}
+  asteroidSplitter: {fileID: 6662911030125831778, guid: 656b9ff75f1991b4e97fda3b71eb77a4, type: 3}
+  period: 0.23
+  splitterChance: 0.1
 --- !u!4 &853572953
 Transform:
   m_ObjectHideFlags: 0
@@ -500,7 +502,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2ae735152426abe4cb1f2e7fa1570d89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3fc90155ee6be04eb46681f195798c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -557,7 +559,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.6, y: 7.2}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

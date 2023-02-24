@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6662911030125831780}
   - component: {fileID: 6662911030125831781}
-  - component: {fileID: -1052527719846381634}
+  - component: {fileID: 2252070530037065739}
   m_Layer: 0
-  m_Name: Asteroid
+  m_Name: Asteroid-Splitter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 489feb41c566f904cb2f524374c55cd1, type: 3}
-  m_Color: {r: 0.4339623, g: 0.19128385, b: 0.10098491, a: 1}
+  m_Color: {r: 1, g: 0.7542633, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1052527719846381634
+--- !u!114 &2252070530037065739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,9 +94,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6662911030125831778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c34544a335dac9441957d7695da174ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a5c4771fe9dbec42a2c1e3a4428a538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 1}
-  speed: 5
+  speed: 3
   velocity: {x: 0, y: 0}
+  fragment: {fileID: 6662911030125831778, guid: 4fda2b6823358ff47b25b85f02256318, type: 3}
+  fragCount: 4
