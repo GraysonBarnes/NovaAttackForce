@@ -12,7 +12,7 @@ public class asteroidManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        restartTime();
     }
 
     // Update is called once per frame
@@ -48,5 +48,10 @@ public class asteroidManager : MonoBehaviour
             Asteroid bob = bo.GetComponent<Asteroid>();
             bob.direction = direction;
         }
+    }
+
+    public void restartTime()
+    {
+        spawnTime = Time.time;
     }
 }
