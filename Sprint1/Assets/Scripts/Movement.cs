@@ -43,6 +43,7 @@ public class Movement : MonoBehaviour
         shoot = Input.GetKeyDown(KeyCode.Space);
         if (shoot)
         {
+            Destroy(GameObject.Find("Overlay"));
             shoot = false;
             foreach(bulletManager bm in bms)
             {

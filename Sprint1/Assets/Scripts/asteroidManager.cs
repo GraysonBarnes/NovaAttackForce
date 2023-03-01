@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class asteroidManager : MonoBehaviour
 {
-    public Asteroid asteroid;
+    public GameObject asteroid;
+    public GameObject asteroidSplitter;
     private float spawnTime = 0.0f;
     public float period = 0.5f;
-
+    public float splitterChance = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,9 +35,19 @@ public class asteroidManager : MonoBehaviour
     {
         Vector3 position = transform.position;
         position.x = xPos;
-        GameObject bo = Instantiate(asteroid.gameObject, position, Quaternion.identity);
-        Asteroid bob = bo.GetComponent<Asteroid>();
-        bob.direction = direction;
+
+        if (Random.Range(0.0f, 1.0f) <= splitterChance)
+        {
+            GameObject bo = Instantiate(asteroidSplitter, position, Quaternion.identity);
+            AsteroidSplitter bob = bo.GetComponent<AsteroidSplitter>();
+            bob.direction = direction;
+        }
+        else
+        {
+            GameObject bo = Instantiate(asteroid, position, Quaternion.identity);
+            Asteroid bob = bo.GetComponent<Asteroid>();
+            bob.direction = direction;
+        }
     }
 
     public void restartTime()
