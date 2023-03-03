@@ -34,11 +34,11 @@ public class Movement : MonoBehaviour
         {
             v = 0;
         }
-        if (gameObject.transform.position.y >= -1 && v > 0)
+        if (gameObject.transform.position.y >= 4.9 && v > 0)
         {
             v = 0;
         }
-        gameObject.transform.position = new Vector2 (transform.position.x + (h * speed), transform.position.y + (v * speed));
+        gameObject.transform.position = new Vector2 (transform.position.x + (h * speed * Time.deltaTime), transform.position.y + (v * speed * Time.deltaTime));
 
         shoot = Input.GetKeyDown(KeyCode.Space);
         if (shoot)
