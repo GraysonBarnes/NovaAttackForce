@@ -854,7 +854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209972269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0701, y: -3.86, z: 0}
+  m_LocalPosition: {x: 0.0701, y: -4.666, z: 0}
   m_LocalScale: {x: 0.12303118, y: 0.12994406, z: 1.0234}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1051,6 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1414606807}
+  g_ship: {fileID: 1209972269}
 --- !u!1 &1905152560
 GameObject:
   m_ObjectHideFlags: 0

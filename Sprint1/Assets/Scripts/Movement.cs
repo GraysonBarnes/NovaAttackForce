@@ -8,7 +8,13 @@ public class Movement : MonoBehaviour
 
     public float speed = 0.0f;
     private CharacterController controller;
+
+    // shooting control
+    float f_timer = 0;
+    float f_timerCheck = 1; // 1 second
     bool shoot;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,10 +45,14 @@ public class Movement : MonoBehaviour
             v = 0;
         }
         gameObject.transform.position = new Vector2 (transform.position.x + (h * speed * Time.deltaTime), transform.position.y + (v * speed * Time.deltaTime));
-
-        shoot = Input.GetKeyDown(KeyCode.Space);
+        f_timer += Time.deltaTime;
+        if (f_timer >= f_timerCheck)
+        {
+            shoot = Input.GetKeyDown(KeyCode.Space);
+        }
         if (shoot)
         {
+            f_timer = 0;
             Destroy(GameObject.Find("Overlay"));
             shoot = false;
             foreach(bulletManager bm in bms)
