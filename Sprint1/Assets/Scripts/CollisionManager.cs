@@ -14,13 +14,15 @@ public class CollisionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject[] powerups = GameObject.FindGameObjectsWithTag("Powerup");
 
         GameObject[] shots = GameObject.FindGameObjectsWithTag("Bullet");
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject shield = GameObject.FindGameObjectWithTag("Shield");
 
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         for (int i = 0; i < shots.Length; i++)
         {
@@ -41,10 +43,18 @@ public class CollisionManager : MonoBehaviour
 
         }
 
-
-
         for (int j = 0; j < enemies.Length; j++)
         {
+            if (shield != null)
+            {
+                if (AABBCollision(shield, enemies[j]))
+                {
+                    Destroy(shield);
+                    Destroy(enemies[j]);
+                }
+
+            }
+
 
             if (AABBCollision(player, enemies[j]))
             {
@@ -54,11 +64,41 @@ public class CollisionManager : MonoBehaviour
                 Destroy(enemies[j]);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+        }
+
+
+        for (int j = 0; j < powerups.Length; j++)
+        {
+
+            if (AABBCollision(player, powerups[j]))
+            {
+                GameObject bo = powerups[j];
+                PowerupShield bob = bo.GetComponent<PowerupShield>();
+                bob.Activate();
+                Destroy(powerups[j]);
+            }
 
         }
 
 
+        for (int i = 0; i < shots.Length; i++)
+        {
 
+            for (int j = 0; j < enemies.Length; j++)
+            {
+
+                if (AABBCollision(shots[i], enemies[j]))
+                {
+
+                    Destroy(shots[i]);
+
+                    Destroy(enemies[j]);
+                }
+
+            }
+
+
+        }
 
 
 

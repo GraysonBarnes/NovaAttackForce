@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8722988727197814276}
   - component: {fileID: 8722988727197814279}
+  - component: {fileID: -3368353566487360307}
   m_Layer: 0
   m_Name: Powerup-Shield
-  m_TagString: Untagged
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3368353566487360307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722988727197814278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d4cb0b0cfa5bc4fb766d969c526ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 1}
+  speed: 3
+  velocity: {x: 0, y: 0}
+  shield: {fileID: 7307806823811138594, guid: c27cf04480f57aa40978f01cadbd3ba7, type: 3}

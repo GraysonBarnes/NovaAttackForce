@@ -21,7 +21,6 @@ public class asteroidManager : MonoBehaviour
         if (Time.time > spawnTime)
         {
             spawnTime += period;
-            Debug.Log("hello");
             float xLean = (Random.Range(-2.0f, 2.0f));
             Vector2 vec = new Vector2(xLean, -1.0f);
             vec = vec.normalized;

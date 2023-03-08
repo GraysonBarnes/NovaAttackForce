@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 219863531485111297}
   - component: {fileID: 4376575298537503466}
+  - component: {fileID: 4206687985042655445}
   m_Layer: 0
   m_Name: Ship-Shield
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4206687985042655445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307806823811138594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1d6abdb879a8e45a1a79e4f449196b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
