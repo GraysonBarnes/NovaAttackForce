@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5075082869330327138}
   - component: {fileID: 4200357345250695666}
+  - component: {fileID: 1990586383296994816}
   m_Layer: 0
   m_Name: Powerup-ClearField
   m_TagString: Powerup
@@ -84,3 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1990586383296994816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196112483341844324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6876f1c4c0080c24787e4ba9317adfa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 1}
+  speed: 3
+  velocity: {x: 0, y: 0}
+  shield: {fileID: 0}

@@ -11,8 +11,8 @@ public class Movement : MonoBehaviour
 
     // shooting control
     float f_timer = 0;
-    float f_timerCheck = 1; // 1 second
-    bool shoot;
+    public float f_timerCheck = 1; // 1 second
+    public bool shoot;
 
 
     // Start is called before the first frame update

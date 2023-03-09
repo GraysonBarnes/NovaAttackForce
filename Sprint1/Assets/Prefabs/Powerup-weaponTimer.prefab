@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2298382523115786433}
   - component: {fileID: 5433591918654294037}
+  - component: {fileID: 2551814330921922010}
   m_Layer: 0
   m_Name: Powerup-weaponTimer
   m_TagString: Powerup
@@ -84,3 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2551814330921922010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375788769611533731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa461983af5e9842a0b5f16081b85d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 1}
+  speed: 3
+  velocity: {x: 0, y: 0}

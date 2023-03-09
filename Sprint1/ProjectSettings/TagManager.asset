@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Powerup
   - Shield
+  - score
   layers:
   - Default
   - TransparentFX

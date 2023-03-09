@@ -926,6 +926,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  f_timerCheck: 1
+  shoot: 0
 --- !u!61 &1209972273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -966,7 +968,7 @@ GameObject:
   - component: {fileID: 1414606809}
   m_Layer: 5
   m_Name: Score
-  m_TagString: Untagged
+  m_TagString: score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1102,6 +1104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1414606807}
   g_ship: {fileID: 1209972269}
+  scoreScale: 1
 --- !u!1 &1905152560
 GameObject:
   m_ObjectHideFlags: 0

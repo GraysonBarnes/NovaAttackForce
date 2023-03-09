@@ -37,9 +37,45 @@ public class PowerupManager : MonoBehaviour
         position.x = xPos;
         position.y = 6;
 
-        GameObject bo = Instantiate(shield, position, Quaternion.identity);
-        PowerupShield bob = bo.GetComponent<PowerupShield>();
-        bob.direction = direction;
+        int i_whatPowerup = 3;
+
+        i_whatPowerup = (int)Random.Range(0.0f, 4.0f);
+
+        switch(i_whatPowerup)
+        {
+            case 0:
+                {
+                    GameObject bo = Instantiate(shield, position, Quaternion.identity);
+                    PowerupShield bob = bo.GetComponent<PowerupShield>();
+                    bob.direction = direction;
+                }
+                break;
+            case 1:
+                {
+                    GameObject bo = Instantiate(bomb, position, Quaternion.identity);
+                    PowerupBomb bob = bo.GetComponent<PowerupBomb>();
+                    bob.direction = direction;
+                }
+                break;
+            case 2:
+                {
+                    GameObject bo = Instantiate(point, position, Quaternion.identity);
+                    PowerupScore bob = bo.GetComponent<PowerupScore>();
+                    bob.direction = direction;
+                }
+                break;
+            default:
+                {
+                    GameObject bo = Instantiate(wepon, position, Quaternion.identity);
+                    PowerupShoot bob = bo.GetComponent<PowerupShoot>();
+                    bob.direction = direction;
+                }
+                break;
+        }
+
+        // GameObject bo = Instantiate(shield, position, Quaternion.identity);
+        // PowerupShield bob = bo.GetComponent<PowerupShield>();
+        // bob.direction = direction;
 
         //float rand = Random.Range(0.0f, 1.0f)
 

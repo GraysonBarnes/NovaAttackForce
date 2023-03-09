@@ -73,9 +73,30 @@ public class CollisionManager : MonoBehaviour
             if (AABBCollision(player, powerups[j]))
             {
                 GameObject bo = powerups[j];
-                PowerupShield bob = bo.GetComponent<PowerupShield>();
-                bob.Activate();
-                Destroy(powerups[j]);
+                if (bo.GetComponent<PowerupShield>())
+                {
+                    PowerupShield bob = bo.GetComponent<PowerupShield>();
+                    bob.Activate();
+                    Destroy(powerups[j]);
+                }
+                else if (bo.GetComponent<PowerupBomb>())
+                {
+                    PowerupBomb bob = bo.GetComponent<PowerupBomb>();
+                    bob.Activate();
+                    Destroy(powerups[j]);
+                }
+                else if (bo.GetComponent<PowerupScore>())
+                {
+                    PowerupScore bob = bo.GetComponent<PowerupScore>();
+                    bob.Activate();
+                    Destroy(powerups[j]);
+                }
+                else if (bo.GetComponent<PowerupShoot>())
+                {
+                    PowerupShoot bob = bo.GetComponent<PowerupShoot>();
+                    bob.Activate();
+                    Destroy(powerups[j]);
+                }
             }
 
         }

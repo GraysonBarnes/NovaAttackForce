@@ -11,6 +11,8 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] private GameObject g_ship;
 
+    public float scoreScale = 1;
+
     private Transform t_ship;
     float f_scoreOut = 0.0f;
     float f_timer = 0;
@@ -40,7 +42,7 @@ public class ScoreManager : MonoBehaviour
         // hardcode position of y5 to offset 0 in the center of the scene
         float f_shipPositionY = t_ship.transform.position.y + f_localGoal;
         float f_scoreScale = (f_shipPositionY / 10.0f) * 100.0f;
-        f_timer += (Time.deltaTime * f_scoreScale);
+        f_timer += (Time.deltaTime * f_scoreScale * scoreScale);
 
         // between step preserved in the event of later changes
         f_scoreOut = (int)f_timer;
