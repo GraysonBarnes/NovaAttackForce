@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadGame : MonoBehaviour
+public class LoadTutorial : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,8 +13,8 @@ public class LoadGame : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
         if(Input.GetKeyUp(KeyCode.Space))
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("PowerUpsTutorial", LoadSceneMode.Single);
     }
 }

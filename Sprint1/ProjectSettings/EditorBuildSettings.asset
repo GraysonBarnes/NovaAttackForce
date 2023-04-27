@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
-  - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: 99d17b970df367440b6a45286c930ffe
+  - enabled: 1
+    path: Assets/Scenes/PowerUpsTutorial.unity
+    guid: cc2e487df5eec044981f6e3e994bc9c0
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7c0e38bd612d0c64aa4c98c4f457fe24, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 440afd87058c6c843831c58c8b9eda41, type: 2}
